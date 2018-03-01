@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MaDeuxiemeApplication
 {
@@ -10,6 +11,7 @@ namespace MaDeuxiemeApplication
             //string saisie = Console.ReadLine();
             //Console.WriteLine("Vous avez saisi : " + saisie);
 
+            /*
             bool ageIsValid = false;
             int age = -1;
             while (!ageIsValid)
@@ -25,6 +27,63 @@ namespace MaDeuxiemeApplication
                 }
             }
             Console.WriteLine("Votre âge est de : " + age);
+            */
+
+            /*
+            Console.WriteLine("Veuillez appuyer sur une touche pour démarrer le calcul ...");
+            Console.ReadKey(true);
+            int somme = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                somme += i;
+            }
+            Console.WriteLine(somme);
+            */
+
+            /*
+            Console.WriteLine("Voulez-vous continuer (O/N) ?");
+            ConsoleKeyInfo saisie = Console.ReadKey(true);
+            if (saisie.Key == ConsoleKey.O)
+            {
+                Console.WriteLine("On continue ...");
+            }
+            else
+            {
+                Console.WriteLine("On s'arrête ...");
+            }
+            */
+
+            Console.WriteLine(CalculSommeIntersection());
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(CalculSommeIntersection());
+        }
+
+        static int CalculSommeIntersection()
+        {
+            List<int> multiplesDe3 = new List<int>();
+            List<int> multiplesDe5 = new List<int>();
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0)
+                    multiplesDe3.Add(i);
+                if (i % 5 == 0)
+                    multiplesDe5.Add(i);
+            }
+
+            int somme = 0;
+            foreach (int m3 in multiplesDe3)
+            {
+                foreach (int m5 in multiplesDe5)
+                {
+                    if (m3 == m5)
+                        somme += m3;
+                }
+            }
+            return somme;
         }
     }
 }
