@@ -53,12 +53,40 @@ namespace MaDeuxiemeApplication
             }
             */
 
-            Console.WriteLine(CalculSommeIntersection());
-        }
+            int valeurATrouver = new Random().Next(1, 101);
+            bool numeroOk = false;
+            int compteur = 0;
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(CalculSommeIntersection());
+            Console.WriteLine("Veuillez entrer un numero entre 1 et 100");
+
+            while (!numeroOk)
+            {
+                string saisie = Console.ReadLine();
+
+                if (int.TryParse(saisie, out int numero))
+                {
+                    if (numero > valeurATrouver)
+                    {
+                        Console.WriteLine("Moins");
+                        compteur++;
+                    }
+                    else if(numero < valeurATrouver)
+                    {
+                        Console.WriteLine("Plus");
+                        compteur++;
+                    }
+                    else if(numero == valeurATrouver)
+                    {
+                        Console.WriteLine("Gagné !!");
+                        Console.WriteLine("Vous avez joué " + compteur + " fois");
+                        numeroOk = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("La valeur entrée n'est pas un nombre");
+                }
+            }
         }
 
         static int CalculSommeIntersection()
