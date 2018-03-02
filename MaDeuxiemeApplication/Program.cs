@@ -97,10 +97,22 @@ namespace MaDeuxiemeApplication
             }
             */
 
+            /*
             foreach (string parametre in Environment.GetCommandLineArgs())
             {
                 Console.WriteLine(parametre);
             }
+            */
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.Write("Hello ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.Write("les couleurs");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Write(" dans la console\n");
         }
     }
 }
