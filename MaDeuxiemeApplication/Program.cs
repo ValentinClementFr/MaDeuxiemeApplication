@@ -128,10 +128,25 @@ namespace MaDeuxiemeApplication
             }
             */
 
+            /*
             Console.WriteLine("Hello world");
+            int x = Console.CursorLeft;
+            int y = Console.CursorTop;
             Console.SetCursorPosition(25, 7);
             Console.WriteLine("Hello world aussi");
-            Console.WriteLine("Encore Hello world");
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("En dessous du premier");
+            */
+
+            CentrerLeTexte("Hello world");
+            CentrerLeTexte("Je suis un texte plus long");
+        }
+
+        private static void CentrerLeTexte(string texte)
+        {
+            int nbEspaces = (Console.WindowWidth - texte.Length) / 2;
+            Console.SetCursorPosition(nbEspaces, Console.CursorTop);
+            Console.WriteLine(texte);
         }
     }
 }
