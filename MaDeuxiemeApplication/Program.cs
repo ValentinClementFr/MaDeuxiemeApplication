@@ -116,6 +116,7 @@ namespace MaDeuxiemeApplication
             Console.Write(" dans la console\n");
             */
 
+            /*
             for (int i = 1; i <= 40; i++)
             {
                 Console.WriteLine("Ligne numéro " + i);
@@ -125,6 +126,12 @@ namespace MaDeuxiemeApplication
                     Console.Clear();
                 }
             }
+            */
+
+            Console.WriteLine("Hello world");
+            Console.SetCursorPosition(25, 7);
+            Console.WriteLine("Hello world aussi");
+            Console.WriteLine("Encore Hello world");
         }
     }
 }
