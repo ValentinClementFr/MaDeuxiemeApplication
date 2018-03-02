@@ -189,6 +189,7 @@ namespace MaDeuxiemeApplication
             }
             */
 
+            /*
             char cLight = Encoding.GetEncoding(850).GetChars(new byte[] { 176 })[0];
             char cDark = Encoding.GetEncoding(850).GetChars(new byte[] { 177 })[0];
             char cDarkLight = Encoding.GetEncoding(850).GetChars(new byte[] { 178 })[0];
@@ -202,6 +203,25 @@ namespace MaDeuxiemeApplication
             Console.SetCursorPosition(0, 20);
             Console.CursorVisible = false;
             Console.ReadKey(true);
+            */
+
+            int noteDo = 262;
+            int noteRe = 294;
+            int noteMi = 330;
+            int noire = 400;
+            int blanche = 800;
+
+            Console.Beep(noteDo, noire);
+            Console.Beep(noteDo, noire);
+            Console.Beep(noteDo, noire);
+            Console.Beep(noteRe, noire);
+            Console.Beep(noteMi, blanche);
+            Console.Beep(noteRe, blanche);
+            Console.Beep(noteDo, noire);
+            Console.Beep(noteMi, noire);
+            Console.Beep(noteRe, noire);
+            Console.Beep(noteRe, noire);
+            Console.Beep(noteDo, noire);
         }
 
         private static void CentrerLeTexte(string texte)
