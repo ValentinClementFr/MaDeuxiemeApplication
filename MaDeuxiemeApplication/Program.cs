@@ -104,6 +104,7 @@ namespace MaDeuxiemeApplication
             }
             */
 
+            /*
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.Write("Hello ");
@@ -113,6 +114,17 @@ namespace MaDeuxiemeApplication
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
             Console.Write(" dans la console\n");
+            */
+
+            for (int i = 1; i <= 40; i++)
+            {
+                Console.WriteLine("Ligne numéro " + i);
+                if (i % 10 == 0)
+                {
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
         }
     }
 }
