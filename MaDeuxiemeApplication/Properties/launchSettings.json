@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MaDeuxiemeApplication": {
+      "commandName": "Project",
+      "commandLineArgs": "Bonjour Claude"
+    }
+  }
+}

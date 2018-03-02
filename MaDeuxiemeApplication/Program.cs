@@ -53,6 +53,7 @@ namespace MaDeuxiemeApplication
             }
             */
 
+            /*
             int valeurATrouver = new Random().Next(1, 101);
             bool numeroOk = false;
             int compteur = 0;
@@ -87,31 +88,19 @@ namespace MaDeuxiemeApplication
                     Console.WriteLine("La valeur entrée n'est pas un nombre");
                 }
             }
-        }
+            */
 
-        static int CalculSommeIntersection()
-        {
-            List<int> multiplesDe3 = new List<int>();
-            List<int> multiplesDe5 = new List<int>();
-
-            for (int i = 1; i <= 100; i++)
+            /*
+            foreach (string parametre in args)
             {
-                if (i % 3 == 0)
-                    multiplesDe3.Add(i);
-                if (i % 5 == 0)
-                    multiplesDe5.Add(i);
+                Console.WriteLine(parametre);
             }
+            */
 
-            int somme = 0;
-            foreach (int m3 in multiplesDe3)
+            foreach (string parametre in Environment.GetCommandLineArgs())
             {
-                foreach (int m5 in multiplesDe5)
-                {
-                    if (m3 == m5)
-                        somme += m3;
-                }
+                Console.WriteLine(parametre);
             }
-            return somme;
         }
     }
 }
