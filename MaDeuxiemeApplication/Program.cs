@@ -205,6 +205,7 @@ namespace MaDeuxiemeApplication
             Console.ReadKey(true);
             */
 
+            /*
             int noteDo = 262;
             int noteRe = 294;
             int noteMi = 330;
@@ -222,6 +223,11 @@ namespace MaDeuxiemeApplication
             Console.Beep(noteRe, noire);
             Console.Beep(noteRe, noire);
             Console.Beep(noteDo, noire);
+            */
+
+            string chaine = "12,25";
+            int i = Convert.ToInt32(chaine);
+            Console.WriteLine(i);
         }
 
         private static void CentrerLeTexte(string texte)
